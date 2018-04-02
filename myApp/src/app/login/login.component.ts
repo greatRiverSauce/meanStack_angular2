@@ -13,7 +13,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onSignin(form) {
-    this.authService.authanticate(form.value.email, form.value.password);
+    this.authService.authanticate(form.value.email, form.value.password).subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
   }
 
 }
