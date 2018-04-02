@@ -10,13 +10,15 @@ import { AppRouterModule } from "./app-router.module";
 import { UserService } from "./share/user.service";
 import {AuthService} from "./share/auth.service";
 import { HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
