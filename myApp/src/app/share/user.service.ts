@@ -16,7 +16,12 @@ export class UserService{
   getUserByEmail(email: string) {
     this.http.get('http://localhost:8000/user/email/' + email)
       .subscribe((data) => {
-        console.log(data);
+        if (data) {
+          console.log(data);
+        } else {
+          console.log('This email address does not exist');
+
+        }
       })
   }
 }

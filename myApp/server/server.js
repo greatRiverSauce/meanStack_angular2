@@ -50,7 +50,7 @@ app.get('/user/email/:email', (req, res, next) => {
     if (!err) {
       res.send(doc);
     } else {
-      console.log(err);
+      res.send({'success': false});
     }
   })
 });
